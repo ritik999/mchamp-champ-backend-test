@@ -105,6 +105,6 @@ export const allData=async(req,res)=>{
         // console.log(rows2);
         res.status(200).json({users:rows,shopAction:rows2});  
     } catch (error) {
-        res.status(500).json({error:"something went wrrong"});
+        res.status(500).json({error:error});
     }
 }
