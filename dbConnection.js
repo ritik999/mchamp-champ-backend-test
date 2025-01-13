@@ -1,6 +1,7 @@
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
 dotenv.config();
+
 export const connection=mysql.createPool({
     host:process.env.HOST,
     user:process.env.USER,
@@ -8,3 +9,22 @@ export const connection=mysql.createPool({
     database:process.env.DATABASE,
     port:process.env.DB_PORT
 })
+
+console.log('db connected');
+console.log(process.env.USER);
+console.log(process.env.HOST);
+console.log(process.env.myname);
+
+
+
+
+
+// connection.connect((err)=>{
+//     if(err){
+//         console.log(err.message);
+//         throw err;
+//     }
+//     console.log('db connected');
+// })
+
+

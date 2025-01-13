@@ -12,6 +12,10 @@ app.use(cors({
     origin:'*',
     credentials:true
 }))
+app.use((err,req,res,next)=>{
+    console.log(err.stack);
+    res.status(500).json({error:'something broke!'});
+})
 
 // Endpoints
 app.use('/api/action',actionRoute)

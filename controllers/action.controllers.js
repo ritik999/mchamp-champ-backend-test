@@ -101,8 +101,8 @@ export const allData=async(req,res)=>{
     try {
         const [rows] = await connection.query('SELECT * FROM users');
         const [rows2] = await connection.query('SELECT * FROM shop_action');
-        console.log(rows);
-        console.log(rows2);
+        // console.log(rows);
+        // console.log(rows2);
         res.status(200).json({users:rows,shopAction:rows2});  
     } catch (error) {
         res.status(500).json({error:error.message});
